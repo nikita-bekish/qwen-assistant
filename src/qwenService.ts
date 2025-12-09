@@ -39,7 +39,6 @@ export class QwenService {
           timeout: this.config.timeout,
         }
       );
-      console.log("nik response data", response.data);
       return response.data.response;
     } catch (error) {
       if (axios.isAxiosError(error)) {
