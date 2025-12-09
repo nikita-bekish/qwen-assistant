@@ -1,71 +1,84 @@
-# qwen-assistant README
+# Qwen AI Assistant
 
-This is the README for your extension "qwen-assistant". After writing up a brief description, we recommend including the following sections.
+A privacy-focused, offline AI code assistant for VS Code powered by Qwen and Ollama. Get instant code explanations, reviews, and answers without sending your code to the cloud.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+### 🔍 Explain Code
+Select any code snippet and get a clear, concise explanation of what it does.
 
-For example if there is an image subfolder under your extension project workspace:
+### 🔎 Review Code
+Get professional code reviews with suggestions for improvements, potential bugs, and best practices.
 
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+### 💬 Ask Questions
+Ask custom questions about your selected code - optimization tips, alternative approaches, or anything else.
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+- **Ollama** must be installed and running locally
+- **Qwen model** (qwen2.5-coder:7b) must be downloaded
 
-## Extension Settings
+### Installation
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+1. Install [Ollama](https://ollama.ai/)
+2. Download the Qwen model:
+   ```bash
+   ollama pull qwen2.5-coder:7b
+   ```
+3. Start Ollama (it runs automatically on most systems)
+4. Install this extension from the VS Code Marketplace
 
-For example:
+## Usage
 
-This extension contributes the following settings:
+1. **Select code** in your editor
+2. **Right-click** to open context menu
+3. Choose one of the Qwen commands:
+   - **Ask Qwen** - Ask a custom question
+   - **Explain Code with Qwen** - Get an explanation
+   - **Review Code with Qwen** - Get a code review
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+Results appear in the "Qwen Assistant" output panel.
+
+## Privacy & Offline
+
+- ✅ **100% offline** - no internet required after initial setup
+- ✅ **Privacy-first** - your code never leaves your machine
+- ✅ **No telemetry** - no data collection
+- ✅ **Free** - no API keys or subscriptions needed
+
+## Configuration
+
+The extension uses these defaults:
+- **Model**: qwen2.5-coder:7b
+- **API URL**: http://localhost:11434
+- **Timeout**: 30 seconds
+
+(Configuration UI coming in future versions)
 
 ## Known Issues
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+- Requires Ollama to be running before use
+- First request may be slow (model loading)
+- Large code selections may timeout
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
+### 0.1.0 (Initial Release)
 
-### 1.0.0
+- ✨ Ask custom questions about code
+- ✨ Explain code functionality
+- ✨ Review code for improvements
+- ✨ Context menu integration
+- ✨ Offline operation with Ollama
 
-Initial release of ...
+## Contributing
 
-### 1.0.1
+Found a bug or have a feature request? Please [open an issue](https://github.com/nikita-bekish/qwen-assistant/issues).
 
-Fixed issue #.
+## License
 
-### 1.1.0
-
-Added features X, Y, and Z.
+MIT
 
 ---
 
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+**Enjoy coding with your personal AI assistant!** 🤖

@@ -1,14 +1,32 @@
 {
   "name": "qwen-assistant",
-  "displayName": "qwen-assistant",
-  "description": "Local AI code assistant powered by Qwen",
-  "version": "0.0.1",
+  "displayName": "Qwen AI Assistant",
+  "description": "Local offline AI code assistant powered by Qwen. Explain, review, and ask questions about your code without internet.",
+  "version": "0.1.0",
+  "publisher": "nikita-bekish",
   "engines": {
     "vscode": "^1.106.1"
   },
   "categories": [
-    "Other"
+    "Machine Learning",
+    "Programming Languages",
+    "Education"
   ],
+  "keywords": [
+    "ai",
+    "assistant",
+    "qwen",
+    "ollama",
+    "code-review",
+    "code-explain",
+    "offline",
+    "local-llm"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nikita-bekish/qwen-assistant"
+  },
+  "license": "MIT",
   "activationEvents": [],
   "main": "./dist/extension.js",
   "contributes": {
