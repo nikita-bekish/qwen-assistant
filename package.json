@@ -14,10 +14,37 @@
   "contributes": {
     "commands": [
       {
-        "command": "qwen-assistant.helloWorld",
-        "title": "Hello World"
+        "command": "qwen-assistant.askQwen",
+        "title": "Ask Qwen"
+      },
+      {
+        "command": "qwen-assistant.explainCode",
+        "title": "Explain Code with Qwen"
+      },
+      {
+        "command": "qwen-assistant.reviewCode",
+        "title": "Review Code with Qwen"
       }
-    ]
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "qwen-assistant.askQwen",
+          "when": "editorHasSelection",
+          "group": "qwen@1"
+        },
+        {
+          "command": "qwen-assistant.explainCode",
+          "when": "editorHasSelection",
+          "group": "qwen@2"
+        },
+        {
+          "command": "qwen-assistant.reviewCode",
+          "when": "editorHasSelection",
+          "group": "qwen@3"
+        }
+      ]
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run package",
